@@ -55,7 +55,9 @@ fn main() {
     if location.ne(".") {
         path = location
             .split("/")
-            .filter(|&part| !part.is_empty())
+            .enumerate()
+            .filter(|&(i, part)| i == 0 ||!part.is_empty())
+            .map(|(_, part)| part)
             .collect::<Vec<&str>>();
     }
     println!("{}/", path.join("/"));
