@@ -24,7 +24,7 @@ fn main() {
                     println!("Error: Invalid argument! Use: [--path|-p]=<location>");
                     return;
                 }
-            }
+            },
             arg if arg.starts_with("-l") || arg.starts_with("--level") => {
                 let parts = arg.split("=")
                     .filter(|&part| !part.is_empty())
@@ -42,10 +42,10 @@ fn main() {
                     println!("Error: Invalid argument! Use: [--level|-l]=<depth>");
                     return;
                 }
-            }
+            },
             arg if arg.starts_with("-a") || arg.starts_with("--all") => {
                 all = true;
-            }
+            },
             _ => {
                 println!("Error: Unknown argument '{}'!", arg);
                 return;
