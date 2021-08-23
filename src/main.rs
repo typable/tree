@@ -57,6 +57,15 @@ fn main() {
             arg if arg.starts_with("-a") || arg.starts_with("--all") => {
                 all = true;
             },
+            arg if arg.starts_with("-h") || arg.starts_with("--help") => {
+                println!("A list of all commands:");
+                println!("{}", format!("{: <10}{: <8}{}", "--path", "[-p]", "Specifies the to be used path"));
+                println!("{}", format!("{: <10}{: <8}{}", "--level", "[-l]", "Specifies the depth of the tree"));
+                println!("{}", format!("{: <10}{: <8}{}", "--out", "[-o]", "Specifies the output file"));
+                println!("{}", format!("{: <10}{: <8}{}", "--all", "[-a]", "Shows all '.*' files and directories"));
+                println!("{}", format!("{: <10}{: <8}{}", "--help", "[-h]", "Shows a list of all commands"));
+                return;
+            },
             _ => {
                 println!("Error: Unknown argument '{}'!", arg);
                 return;
