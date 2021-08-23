@@ -48,4 +48,4 @@ All arguments can be use independently with each other.
 |**--level [-l]**|Specifies the depth of the tree|`--level=0`|
 |**--out [-o]**|Specifies the output file|`--out=tree.txt`|
 |**--all [-a]**|Shows all `.*` files and directories|`--all`|
-|**--help [-h]**|Shows a list of all commands||
+|**--help [-h]**|Shows a list of all commands|`--help`|
